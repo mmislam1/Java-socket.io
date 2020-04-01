@@ -69,9 +69,10 @@ class Clientwrite implements Runnable {
     public void run() {
         try {
             while (true) {
-                out.writeUTF(b.readLine());
+client=b.readLine();
+                out.writeUTF(client);
                 out.flush();
-                if((b.readLine()).equals("stop"))
+                if(client.equals("stop"))
                 {
                 System.out.println("#You stopped chat");
 
